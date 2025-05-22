@@ -61,3 +61,5 @@ How to programmatically RECEIVE data from the microservice
         const data = await response.json();
         console.log('\nStatus:', response.status, '\nResponse:', data);
     -----------------------------------------------------------------------------
+
+<img width="467" alt="Screenshot 2025-05-21 at 9 45 21 PM" src="https://github.com/user-attachments/assets/2e10837b-71a2-4e1b-a67e-d5c3405ba132" />
