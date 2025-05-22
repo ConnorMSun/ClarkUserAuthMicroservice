@@ -57,4 +57,4 @@ How to programmatically RECEIVE data from the microservice
         console.log('\nStatus:', response.status, '\nResponse:', data);
     -----------------------------------------------------------------------------
 
-<img width="467" alt="Screenshot 2025-05-21 at 9 45 21 PM" src="https://github.com/user-attachments/assets/2e10837b-71a2-4e1b-a67e-d5c3405ba132" />
+<img width="507" alt="Screenshot 2025-05-21 at 9 50 52 PM" src="https://github.com/user-attachments/assets/46ebff99-0bd2-45b9-873a-cef74de62291" />
