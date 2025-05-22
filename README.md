@@ -14,3 +14,50 @@ a) node server.js
 
 b) node test.js
 --This runs some tests for the microservice, showing the expected and actual output--
+
+FOR THE ASSIGNMENT:
+How to programmatically REQUEST data from the microservice
+    HTTP Method: POST
+    URL: /login
+    Content-Type: application/json
+    Request Body: JSON with two fields:
+    {
+    "username": "<username>",
+    "password": "<password>"
+    }
+
+    Example Request:
+    -----------------------------------------------------------------------------
+        const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username: 'suncon', password: 'password' })
+        });
+    -----------------------------------------------------------------------------
+
+How to programmatically RECEIVE data from the microservice 
+    Possible Statuses: 200, 401
+
+    Possible Bodies:
+    Successful login
+    {
+        "message": "Authentication successful!",
+        "username": "<successful username>",
+        "password": "<successful password>"
+    }
+    Wrong password
+    {
+        "message": "Invalid Password",
+        "password": "<attempted password>"
+    }
+    User DNE
+    {
+        "message": "User does not exist",
+        "username": "<attempted username>"
+    }
+
+    Example Reception:
+    -----------------------------------------------------------------------------
+        const data = await response.json();
+        console.log('\nStatus:', response.status, '\nResponse:', data);
+    -----------------------------------------------------------------------------
